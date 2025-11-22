@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - Cambridge Hospital</title>
+    <link rel="stylesheet" href="hospital.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <h1>Cambridge Hospital</h1>
+        </div>
+        <ul>
+                <li><a href="Hospital.html"> Home</a></li>
+                <li><a href="services.html">Service's</a></li>
+                <li><a href="specialities.html">Specialty's</a></li>
+                <li><a href="doctors.html">Doctor's</a></li>
+                <li><a href="query.html">Query's</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="appointment.html">Appointment</a></li>
+                <li><a href="#contact">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Appointment Form -->
+    <div class="appointment-form-container">
+        <h2>Book an Appointment</h2>
+        <form id="appointmentForm">
+            
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" required>
+
+            <label for="doctor">Select Doctor</label>
+            <select id="doctor" required>
+                <option value="">-- Choose Doctor --</option>
+                <option value="Yasir Khan">Yasir Khan</option>
+                <option value="Hubab Ali Shah">Hubab Ali Shah</option>
+                <option value="Soniya Qureshi">Soniya Qureshi</option>
+                <option value="Nasir Akhrot">Nasir Akhrot</option>
+                <option value="Bisma Chohan">Bisma Chohan</option>
+                <option value="Laiba Nawaz">Laiba Nawaz</option>
+            </select>
+
+            <label for="date">Select Date</label>
+            <input type="date" id="date" required>
+
+            <label for="time">Select Time</label>
+            <input type="time" id="time" required>
+
+            <button type="submit">Book Appointment</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="text">
+            <h3>About us</h3>
+            <p>24 Hours</p>
+            <p>Top Doctors</p>
+            <p>Best Care</p>
+            <p>Patient reviews</p>
+        </div>
+        <div class="text">
+            <h3>Specaility</h3>
+            <p>Spin Surgery</p>
+            <p>Knee Surgery</p>
+            <p>Leg Surgery</p>
+            <p>C-section</p>
+        </div>
+        <div class="text">
+            <h3>Best Team</h3>
+            <p>Doctor's</p>
+            <p>Nursing</p>
+            <p>Staff</p>
+            <p>Hospital</p>
+        </div>
+        <div class="text">
+            <h3>Address</h3>
+            <p>Near Star gate</p>
+            <p>Aptect learning</p>
+            <p>2233-0022-1119</p>
+            <p>0033-5678</p>
+        </div>
+    </div>
+
+    <script src="hospital.js"></script>
+</body>
+</html>

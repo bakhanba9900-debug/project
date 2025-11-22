@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="hospital.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #a9ccec;
+        }
+
+        .feedback-box {
+            width: 400px;
+            background: #d9e6f3;
+            padding: 30px;
+            margin: 120px auto 50px auto;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .question {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .stars {
+            font-size: 40px;
+            margin: 10px 0;
+        }
+
+        .star {
+            cursor: pointer;
+            color: #b5b5b5;
+            transition: 0.2s;
+        }
+
+        .star.active {
+            color: #ffcc00;
+        }
+
+        textarea {
+            width: 100%;
+            height: 130px;
+            border-radius: 10px;
+            border: 1px solid #c3c3c3;
+            padding: 12px;
+            font-size: 15px;
+            resize: none;
+        }
+
+        .submit-btn {
+            margin-top: 20px;
+            width: 70%;
+            padding: 12px;
+            background: #2d4f93;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit-btn:hover {
+            background: #1e3a72;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">
+            <h1>Cambridge Hospital</h1>
+        </div>
+
+        <ul>
+                <li><a href="Hospital.html"> Home</a></li>
+                <li><a href="services.html">Service's</a></li>
+                <li><a href="specialities.html">Specialty's</a></li>
+                <li><a href="doctors.html">Doctor's</a></li>
+                <li><a href="query.html">Query's</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="appointment.html">Appointment</a></li>
+                <li><a href="#contact">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <div class="feedback-box">
+        <h2>We value your opinion.</h2>
+
+        <p class="question">How would you rate your overall experience?</p>
+
+        <div class="stars" id="starsArea">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+        </div>
+
+        <textarea id="feedbackText" placeholder="Write your feedback..."></textarea>
+
+        <button class="submit-btn" id="submitBtn">Share my feedback</button>
+    </div>
+
+    <div class="footer">
+        <div class="text">
+            <h3>About us</h3>
+            <p>24 Hours</p>
+            <p>Top Doctors</p>
+            <p>Best Care</p>
+            <p>Patient reviews</p>
+        </div>
+
+        <div class="text">
+            <h3>Speciality</h3>
+            <p>Spin Surgery</p>
+            <p>Knee Surgery</p>
+            <p>Leg Surgery</p>
+            <p>C-section</p>
+        </div>
+
+        <div class="text">
+            <h3>Best Team</h3>
+            <p>Doctor's</p>
+            <p>Nursing</p>
+            <p>Staff</p>
+            <p>Hospital</p>
+        </div>
+
+        <div class="text">
+            <h3>Address</h3>
+            <p>Near Star gate</p>
+            <p>Aptect learning</p>
+            <p>2233-0022-1119</p>
+            <p>0033-5678</p>
+        </div>
+    </div>
+
+    <script>
+        const stars = document.querySelectorAll(".star");
+        let rating = 0;
+
+        stars.forEach(star => {
+            star.addEventListener("click", function () {
+                rating = this.dataset.value;
+
+                stars.forEach(s => s.classList.remove("active"));
+                for (let i = 0; i < rating; i++) {
+                    stars[i].classList.add("active");
+                }
+            });
+        });
+
+        document.getElementById("submitBtn").addEventListener("click", function () {
+            let text = document.getElementById("feedbackText").value;
+
+            if (rating == 0) {
+                alert("Please give a rating first.");
+                return;
+            }
+
+            if (text.trim() === "") {
+                alert("Please write some feedback.");
+                return;
+            }
+
+            stars.forEach(s => s.classList.remove("active"));
+            rating = 0;
+            document.getElementById("feedbackText").value = "";
+
+            alert("Thanks for your feedback!");
+        });
+    </script>
+
+</body>
+
+<script src="hospital.js"></script>
+</html>

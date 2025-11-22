@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask a Question</title>
+    <link rel="stylesheet" href="hospital.css">
+</head>
+
+?
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">
+            <h1>Cambridge Hospital</h1>
+        </div>
+
+        <ul>
+                 <li><a href="Hospital.html"> Home</a></li>
+                <li><a href="services.html">Service's</a></li>
+                <li><a href="specialities.html">Specialty's</a></li>
+                <li><a href="doctors.html">Doctor's</a></li>
+                <li><a href="query.html">Query's</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+                <li><a href="appointment.html">Appointment</a></li>
+                <li><a href="#contact">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Query Form Section -->
+    <div class="form-container" id="query">
+        <h2>ASK A QUESTION</h2>
+
+        <form onsubmit="handleSubmit(event)">
+            <label>Email Address</label>
+            <input type="email" required>
+
+            <label>Your Name</label>
+            <div class="name-fields">
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name">
+            </div>
+
+            <label>Your Question?</label>
+            <textarea rows="5" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="text">
+            <h3>About us</h3>
+            <p>24 Hours</p>
+            <p>Top Doctors</p>
+            <p>Best Care</p>
+            <p>Patient reviews</p>
+        </div>
+
+        <div class="text">
+            <h3>Speciality</h3>
+            <p>Spin Surgery</p>
+            <p>Knee Surgery</p>
+            <p>Leg Surgery</p>
+            <p>C-section</p>
+        </div>
+
+        <div class="text">
+            <h3>Best Team</h3>
+            <p>Doctor's</p>
+            <p>Nursing</p>
+            <p>Staff</p>
+            <p>Hospital</p>
+        </div>
+
+        <div class="text">
+            <h3>Address</h3>
+            <p>Near Star gate</p>
+            <p>Aptect learning</p>
+            <p>2233-0022-1119</p>
+            <p>0033-5678</p>
+        </div>
+    </div>
+
+    <script src="hospital.js"></script>
+</body>
+</html>
